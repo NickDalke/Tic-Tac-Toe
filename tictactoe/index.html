@@ -1,0 +1,37 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Welcome To Your Doom!</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+
+	   <script type="text/javascript" src ="angular.js"></script> 
+       <script type="text/javascript" src ="js/firebase.js"></script> 
+       <script type="text/javascript" src ="js/angularfire.js"></script> 
+
+       <script src="js/app.js"></script>
+	   <script src="js/tttController.js"></script>
+
+	</head>
+
+	<body ng-app="tttApp" ng-controller="tttController as tttCtrl">
+		<div class = "score">
+			<h1>Player 1: <span id="score-player1">0</span> Player 2: <span id="score-player2">0</span></h1> 
+		</div>   
+
+		<div class="board">
+			<div class="square" ng-click="tttCtrl.tradeTurns()" img src ="radiation.jpg" ng-show="mainCtrl.imageVisible" id="X"></div> 
+			<div class="square" ng-click="tttCtrl.tradeTurns()"></div>
+			<div class="square" ng-click="tttCtrl.tradeTurns()"></div>
+			<div class="square" ng-click="tttCtrl.tradeTurns()"></div>
+			<div class="square" ng-click="tttCtrl.tradeTurns()"></div>
+			<div class="square" ng-click="tttCtrl.tradeTurns()"></div>
+			<div class="square" ng-click="tttCtrl.tradeTurns()"></div>
+			<div class="square" ng-click="tttCtrl.tradeTurns()"></div>
+			<div class="square" ng-click="tttCtrl.tradeTurns()"></div>
+		</div> 
+		<br>
+		<button id="PlayAgain" ng-click="tttCtrl.reset()">Play Again</button> 
+		<script type="text/javascript" src="app.js"></script>
+
+	</body>
+	</html>

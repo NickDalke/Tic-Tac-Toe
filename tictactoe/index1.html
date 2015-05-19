@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="tttApp">
+<head>
+	<title>Welcome To Your Doom!</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script type="text/javascript" src ="firebase.js"></script> 
+    <script type="text/javascript" src ="angularfire.js"></script> 
+    <script src="app.js"></script>
+    <script src="tttcontroller.js"></script>
+
+
+
+
+</head>
+
+<body ng-controller="tttController as tttCtrl">
+{{2+2}}
+	<div class = "score">
+		<h1>Player 1: <span id="score-player1">0</span> Player 2: <span id="score-player2">0</span></h1>
+	</div>
+
+	<div class="board" ng-model="">
+		<div class="square" ng-repeat="square in tttCtrl.squares" ng-class= "{'X': square.X, 'O': square.O}" ng-click="tttCtrl.placeImage($index)"> 
+	<!-- 		<img src="radiation.jpg" style="width:99px;height:99px;" ng-show="tttCtrl.imageVisible">
+			<img src="galaxy.jpg" style="width:99px;height:99px;" ng-hide="tttCtrl.imageVisible">  -->
+		</div>
+	</div>
+
+	<br>
+	<button id="PlayAgain" ng-click="tttCtrl.reset()">Play Again</button> 
+
+
+</body>
+</html> 
